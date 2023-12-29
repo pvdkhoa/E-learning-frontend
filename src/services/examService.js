@@ -4,7 +4,7 @@ import authHeader from './auth-header';
 
 export default {
     getAllExams () {
-      return Api().get('getAllExams')
+      return Api().get('getAllExams',{ headers: authHeader() })
     },
     createExam (exam) {
         return Api().post('addExam',exam,{ headers: authHeader() })
